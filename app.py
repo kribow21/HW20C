@@ -6,7 +6,7 @@ app=Flask(__name__)
 @app.route('/animals', methods=['GET', 'POST', 'PATCH', 'DELETE'])
 def animal_manip():
     if request.method == 'GET':
-        params = request.args
+        params = request.args 
         animals = ["horse","pig","cow","moose","beaver","squirrel"]
         print(params)
         return Response(json.dumps(animals, default=str),
@@ -35,3 +35,4 @@ def animal_manip():
                         status=200)
     else:
         print("Something wrong, flask let bad request through")
+#aware some of these lines arent necessary but i put them in to make things feel more complete
