@@ -7,18 +7,9 @@ app=Flask(__name__)
 def animal_manip():
     if request.method == 'GET':
         params = request.args
-        animal_dict = {
-            "animal" : "horse",
-            "animal" : "pig",
-            "animal" : "cow",
-            "animal" : "moose",
-            "animal" : "beaver",
-            "animal" : "squirrel",
-        }
-        for animal in animal_dict:
-            print(animal)
+        animals = ["horse","pig","cow","moose","beaver","squirrel"]
         print(params)
-        return Response(json.dumps(animal_dict, default=str),
+        return Response(json.dumps(animals, default=str),
                         mimetype="application/json",
                         status=200)
     elif request.method == 'POST':
