@@ -14,27 +14,21 @@ def animal_manip():
                         status=200)
     elif request.method == 'POST':
         data = request.json
-        add_animal = {
-            "animal" : "monkey"
-        }
+        add_animal = "monkey"
         print(data)
         return Response ("Added an animal to the list",
                         mimetype="text/html",
                         status=200)
     elif request.method == 'PATCH':
         data = request.json
-        edit_animal = {
-            "animal" : "fluffy squirrel"
-        }
+        edit_animal = "fluffy squirrel"
         print(data)
         return Response ("Edited an animal in the list",
                         mimetype="text/html",
                         status=200)
     elif request.method == 'DELETE':
         data = request.json
-        delete_animal = {
-            "animal" : "cow"
-        }
+        delete_animal = "cow"
         print(data)
         return Response ("Deleted an animal from the list",
                         mimetype="text/html",
